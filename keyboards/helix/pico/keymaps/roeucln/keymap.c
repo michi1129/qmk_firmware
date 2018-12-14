@@ -240,6 +240,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 float tone_qwerty[][2]     = SONG(QWERTY_SOUND);
 float tone_dvorak[][2]     = SONG(DVORAK_SOUND);
 float tone_colemak[][2]    = SONG(COLEMAK_SOUND);
+float tone_eucalyn[][2]    = SONG(PLANCK_SOUND);  // provisional
 float tone_plover[][2]     = SONG(PLOVER_SOUND);
 float tone_plover_gb[][2]  = SONG(PLOVER_GOODBYE_SOUND);
 float music_scale[][2]     = SONG(MUSIC_SCALE_SOUND);
@@ -298,7 +299,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case EUCALYN:
       if (record->event.pressed) {
         #ifdef AUDIO_ENABLE
-          PLAY_SONG(tone_dvorak);
+          PLAY_SONG(tone_eucalyn);
         #endif
         persistent_default_layer_set(1UL<<_EUCALYN);
       }
