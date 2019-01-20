@@ -1,1 +1,1 @@
-# The default keymap for Mint60
+# The custom keymap for Mint60
